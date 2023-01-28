@@ -1,0 +1,34 @@
+.comment__field {
+  width: 100%;
+  height: 100%;
+  padding: 14px 15px;
+  border: 1px solid $lightgrey;
+  resize: none;
+  outline: 0;
+  font-family: "Helvetika", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  color: $darkfont-color;
+}
+
+.comment__inner {
+  display: block;
+  width: 100%;
+  height: 122px;
+
+  @media (min-width: $tablet-width) {
+    height: 141px;
+    margin-bottom: 4px;
+  }
+}
+
+.comment__text {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 16px;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+  color: $greyfont-color;
+}

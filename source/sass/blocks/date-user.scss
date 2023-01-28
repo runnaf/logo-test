@@ -1,0 +1,18 @@
+.date-user {
+  padding-top: 25px;
+}
+
+.date-user__title {
+  padding: 0;
+  padding-top: 10px;
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: "Helvetika", "Arial", sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+  color: $darkfont-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+  }
+}

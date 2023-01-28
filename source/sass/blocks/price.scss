@@ -1,0 +1,110 @@
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price__item {
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.price__item--old {
+  font-size: 12px;
+  line-height: 15px;
+  color: $greyfont-color;
+  text-decoration-line: line-through;
+}
+
+.price__quantity-container {
+  min-width: 146px;
+  display: flex;
+  align-items: center;
+  background-color: hsla(0, 0%, 95%, 1);
+  justify-content: space-between;
+  border-radius: 5px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 153px;
+  }
+}
+
+.price__quantity-container p {
+  margin: 0;
+}
+
+.price__quantity-container button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+  padding: 15px;
+  width: 52px;
+  height: 40px;
+  position: relative;
+
+  &::after,
+  &::before {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 12px;
+    height: 1px;
+    content: "";
+    margin: auto;
+    background-color: $black;
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+}
+
+.price__quantity-reduce {
+  &::before {
+    display: none;
+  }
+}
+
+.price__quantity-reduce:disabled {
+  cursor: default;
+
+  &::after,
+  &::before {
+    background-color: $lightgrey;
+  }
+}
+
+.price__count {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  text-align: center;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 0 5px;
+  width: fit-content;
+  max-width: 50px;
+  appearance: none;
+}
+
+.price__count::-webkit-outer-spin-button,
+.price__count::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}

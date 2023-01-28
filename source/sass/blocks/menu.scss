@@ -1,0 +1,22 @@
+.menu__item {
+  width: fit-content;
+  height: auto;
+  display: flex;
+}
+
+.menu__link {
+  padding: 20px;
+
+  &:active,
+  &:focus-visible {
+    color: $greyfont-color;
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    color: $greyfont-color;
+    opacity: 1;
+    transition: 0.3s;
+  }
+}

@@ -1,0 +1,49 @@
+.size {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+  padding-top: 11px;
+}
+
+.size__item {
+  margin-right: 9px;
+}
+
+.size__description {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $greycolor;
+  border: none;
+  outline: none;
+  color: $black;
+  font-size: 12px;
+  line-height: 15px;
+  cursor: pointer;
+}
+
+.size__field:disabled + span,
+.size__field:disabled:hover + span,
+.size__field:disabled:focus + span {
+  background-color: $greycolor;
+  cursor: default;
+  color: $lightgreyfont-color;
+}
+
+.size__field:hover + span {
+  background-color: $lightgrey;
+  color: $darkfont-color;
+  transition: 0.3s;
+}
+
+.size__field:checked + span {
+  background-color: $black;
+  color: $whitefont-color;
+  transition: 0.3s;
+  cursor: default;
+}

@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+button,
+a {
+  cursor: pointer;
+}

@@ -1,0 +1,90 @@
+.subscription {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 416px;
+  }
+}
+
+.subscription__title {
+  margin-right: 0;
+  margin-bottom: 15px;
+  font-size: 20px;
+  line-height: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 83px 40px 0;
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+
+.subscription__form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border: 1px solid $grey;
+}
+
+.subscription__form label {
+  flex-grow: 1;
+}
+
+.subscription__input {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  font-family: "Helvetika", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: $black;
+}
+
+.subscription__submit {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px 15px 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-family: "Helvetika", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  color: $black;
+
+  &:hover {
+    color: $lightgrey;
+    transition: 0.3s;
+  }
+}
+
+.subscription__submit span {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+  }
+}
+
+.subscription__submit svg {
+  margin-right: 10px;
+}
+
+.subscription__politics {
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+  color: $greyfont-color;
+}
+
+.subscription__politics-link {
+  font-family: "Helvetika", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: $greyfont-color;
+}

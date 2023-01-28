@@ -1,0 +1,19 @@
+.cart-description__title {
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 400;
+  width: 64%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+
+.cart-description__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

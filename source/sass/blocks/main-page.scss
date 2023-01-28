@@ -1,0 +1,8 @@
+.main-page {
+  padding: 0;
+  flex: 1;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 50px;
+  }
+}

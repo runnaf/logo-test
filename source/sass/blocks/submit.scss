@@ -1,0 +1,246 @@
+.submit {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 12px;
+  outline: 1px solid $grey;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  margin-top: 6px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 20px;
+    padding: 30px 20px;
+  }
+}
+
+.submit__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $lightgrey;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.submit__item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 21px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.submit__list--discounts {
+  row-gap: 8px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.submit__list--discounts .submit__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit__list--discounts .submit__price {
+  color: $errorfont-color;
+}
+
+.submit__price {
+  margin: 0;
+  font-weight: bold;
+}
+
+.submit__price .submit__price-all {
+  margin-right: 5px;
+}
+
+.submit__little {
+  font-size: 12px;
+  line-height: 15px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+.submit__checkbox {
+  padding-bottom: 10px;
+  border-bottom: 1px solid $lightgrey;
+}
+
+.submit__label-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 11px;
+}
+
+.submit__text-checkbox {
+  font-size: 16px;
+  line-height: 21px;
+  color: $darkfont-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.submit__mark {
+  position: relative;
+  display: block;
+  width: 34px;
+  height: 14px;
+  background-color: #c8c8c8;
+  border-radius: 10px;
+  cursor: pointer;
+  top: 4px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -6px;
+    width: 22px;
+    height: 22px;
+    background-color: $grey;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+}
+
+.submit__input-checkbox:checked + .submit__mark::before {
+  left: 23px;
+  background-color: $darkfont-color;
+  transition: 0.3s;
+}
+
+.submit__text {
+  margin: 0;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+  color: $greyfont-color;
+}
+
+.submit__footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 11px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 20px;
+  }
+}
+
+.submit__result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.submit__result-name,
+.submit__result-price {
+  font-size: 20px;
+  line-height: 24px;
+  color: $darkfont-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 26px;
+  }
+}
+
+.submit__result-price {
+  @media (min-width: $tablet-width) {
+    font-weight: 700;
+  }
+}
+
+.submit__promo {
+  position: relative;
+}
+
+.submit__promo-input {
+  width: 100%;
+  padding: 14px 12px 10px 15px;
+  background-color: $whitefont-color;
+  border: 1px solid $lightgrey;
+  outline: none;
+  font-family: "Helvetika", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  color: $darkfont-color;
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 150px 15px 20px;
+  }
+}
+
+.submit__promo-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: none;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.submit__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  background-color: $black;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 21px;
+  color: $whitefont-color;
+}
+
+.submit__politics,
+.submit__politics-link {
+  font-size: 14px;
+  line-height: 18px;
+  color: $greyfont-color;
+}
+
+.submit__politics {
+  margin: 0;
+  text-align: center;
+}
+
+.submit__item--delivery.is-unactive {
+  color: $lightgreyfont-color;
+  user-select: none;
+}

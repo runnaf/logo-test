@@ -1,0 +1,154 @@
+.header-page {
+  flex: 0 0 auto;
+  width: 100%;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 0;
+  }
+}
+
+.header-page__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  padding-top: 7px;
+
+  &::after {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.5px;
+    background-color: $lightgrey;
+    content: "";
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.header-page__nav--mobile {
+  &::after {
+    display: none;
+  }
+}
+
+.is-with-js.is-mobile .header-page__list--menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+
+.is-mobile .header-page__list--menu {
+  min-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  order: 1;
+  background-color: $whitefont-color;
+  z-index: 100;
+  font-size: 25px;
+  line-height: 1.2;
+  display: flex;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    height: 0.5px;
+    background-color: $lightgrey;
+  }
+}
+
+.is-mobile.is-open .header-page__list--menu {
+  display: flex;
+}
+
+.header-page__button {
+  display: none;
+}
+
+.is-mobile.is-with-js .header-page__button {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  margin-left: 7px;
+  background-color: transparent;
+  border: 0;
+  display: flex;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: $black;
+  }
+
+  &::before {
+    top: 10px;
+    left: 0;
+    width: 32px;
+  }
+
+  &::after {
+    right: 0;
+    bottom: 11px;
+    width: 18px;
+  }
+}
+
+.is-open .header-page__button {
+  &::after,
+  &::before {
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 32px;
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+}
+
+.is-mobile .header-page__item--search,
+.is-mobile .header-page__item--user,
+.is-mobile .header-page__item--favorite {
+  display: none;
+}
+
+.is-mobile .header-page__icon-cart {
+  width: 28px;
+  height: 28px;
+}
+
+.is-mobile .header-page__quantity-goods {
+  display: none;
+}
+
+.header-page__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.header-page__item {
+  height: fit-content;
+}

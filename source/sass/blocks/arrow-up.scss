@@ -1,0 +1,35 @@
+.arrow-up {
+  position: absolute;
+  top: -65px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid $lightgrey;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+
+  @media (min-width: $tablet-width) {
+    top: -100px;
+  }
+}
+
+.arrow-up:active,
+.arrow-up:hover,
+.arrow-up:focus-visible,
+.arrow-up:active svg,
+.arrow-up:hover svg,
+.arrow-up:focus-visible svg {
+  border-color: $grey;
+  transition: 0.3s;
+  fill: $grey;
+}
+
+.arrow-up svg {
+  fill: $lightgrey;
+}

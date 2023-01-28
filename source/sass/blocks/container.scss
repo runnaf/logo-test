@@ -1,0 +1,17 @@
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.container--header {
+  max-width: 1240px;
+}
+
+.container--bread-crumbs {
+  max-width: 1240px;
+}

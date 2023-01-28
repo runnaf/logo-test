@@ -1,0 +1,54 @@
+.color-goods {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.color-goods__item {
+  margin-right: 20px;
+}
+
+.color-goods__mark {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: none;
+  display: block;
+  transition: 0.3s;
+  cursor: pointer;
+  outline: 1px solid transparent;
+}
+
+.color-goods__mark--grey {
+  background-color: hsla(0, 0%, 27%, 1);
+}
+
+.color-goods__mark--turquoise {
+  background-color: hsla(202, 82%, 35%, 1);
+}
+
+.color-goods__mark--mustard {
+  background-color: hsla(36, 88%, 36%, 1);
+}
+
+.color-goods__field:hover + .color-goods__mark {
+  outline-offset: 1px;
+  outline: 1px solid $grey;
+  transition: 0.3s;
+}
+
+.color-goods__field:checked + .color-goods__mark {
+  outline-offset: 2px;
+  outline: 1px solid $black;
+  transition: 0.3s;
+}
+
+.color-goods__field:disabled + span,
+.color-goods__field:disabled:hover + span,
+.scolor-goods__field:disabled:focus + span {
+  cursor: default;
+  background-color: transparent;
+  outline-offset: 1px;
+  outline: 1px solid $grey;
+}

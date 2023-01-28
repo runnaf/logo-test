@@ -1,0 +1,70 @@
+.user-menu {
+  justify-content: flex-end;
+}
+
+.user-menu__icon {
+  stroke: $lightgrey;
+}
+
+.user-menu__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-menu__link-container {
+  position: relative;
+  padding: 5px 7px 9px 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-menu__link {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-menu__link--user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-menu__quantity {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $black;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  color: $whitefont-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  line-height: 8px;
+}
+
+.user-menu__icon-user {
+  width: 20px;
+  height: 20px;
+}
+
+.user-menu__icon-favorite {
+  width: 18.5px;
+  height: 20px;
+}
+
+.user-menu__icon-cart {
+  width: 20px;
+  height: 20px;
+}
+
+.user-menu__icon-search {
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,41 @@
+.bread-crumbs__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.bread-crumbs__link {
+  position: relative;
+  padding: 8px 12px 8px 0;
+  text-decoration: none;
+  color: $greyfont-color;
+  font-size: 12px;
+  line-height: 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -1px;
+    transform: translateY(-50%) rotate(15deg);
+    width: 1px;
+    height: 9px;
+    background-color: $grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 15px;
+  }
+}
+
+.bread-crumbs__item {
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
